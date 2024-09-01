@@ -1,37 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Character encoding for the document -->
     <meta charset="UTF-8">
+    <!-- Viewport settings for responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Document title -->
     <title>Portfolio</title>
+    <!-- Link to the external stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section class="banner">
+    <!-- Banner section with dark mode toggle -->
+    <section class="banner night">
         <header>
+            <!-- Logo and navigation menu -->
             <a href="#" class="logo"> <span>My </span>Portfolio </a>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Work</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </header>
 
+        <!-- Main content of the banner -->
         <div class="content">
             <h2>I am <span id="text"></span></h2>
-            <p>Slogan: Lets break the matrix</p>
-            <button>Join Us</button>
-            <button class="chat">Let's Chat</button>
+            <a href="#about">
+                <button>My Story</button>
+            </a>
         </div>
+        <!-- Dark mode toggle button -->
         <div class="darkMode">
             <ion-icon name="moon-outline"></ion-icon>
             <ion-icon name="sunny-outline"></ion-icon>
         </div>
     </section>
 
+    <!-- Divider between sections -->
 
 
+    <!-- About Me section -->
+    <section id="about" class="section-content night">
+        <h2>About Me</h2>
+        <div class="about-me">
+            <div class="left">
+                <!-- Slideshow for personal photos -->
+                <div class="slider-container">
+                    <div class="slideshow-container">
+                        <!-- Individual slides -->
+                        <div class="mySlides fade">
+                            <img src="assets/abouts/selfie1.png" alt="Selfie 1">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="assets/abouts/selfie2.png" alt="Selfie 2">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="assets/abouts/selfie3.png" alt="Selfie 3">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="assets/abouts/selfie4.png" alt="Selfie 4">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="assets/abouts/selfie5.png" alt="Selfie 5">
+                        </div>
+                    </div>
+                </div>
+                <!-- Personal introduction text -->
+                <div class="text-container">
+                    <p>Hello! I’m Mantraay Patil, a dedicated full-stack developer with a passion for JavaScript, React, and web technologies. My journey in web development combines creativity and logic, along with a deep interest in data structures and algorithms using Python. When I’m not coding, you might find me exploring hiking through nature, or exploring a new country.</p>
+                </div>
+            </div>
+            <div class="right">
+                <!-- Education section -->
+                <div class="box">
+                    <section id="education">
+                        <h3>Education</h3>
+                        <div class="education-content">
+                            <!-- Individual education entries -->
+                            <div class="education-item">
+                                <div class="education-details">
+                                    <img src="assets/abouts/UoElogo.png" alt="University Logo" class="education-image">
+                                    <div class="education-text">
+                                        <h4>Bachelor of Engineering (Hons) in Electronics and Computer Science</h4>
+                                        <p>University of Edinburgh (2022-2026)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="education-item">
+                                <div class="education-details">
+                                    <img src="assets/abouts/iblogo.png" alt="IB Logo" class="education-image">
+                                    <div class="education-text">
+                                        <h4>International Baccalaureate (Graduated with distinctions)</h4>
+                                        <p>Vienna International School (2020-2022)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!-- Experience section -->
+                <div class="box" id="experience">
+                    <h3>Experience</h3>
+                    <div class="experience-content">
+                        <!-- Individual experience entries -->
+                        <div class="experience-item">
+                            <div class="experience-text">
+                                <h4>Teaching Support Provider</h4>
+                                <p>University of Edinburgh, (09/2023 - 01/2024)</p>
+                                <p>Facilitated learning in Haskell and Functional Programming, applied advanced computation concepts, and tackled complex problem-solving tasks.</p>
+                            </div>
+                        </div>
+                        <div class="experience-item">
+                            <div class="experience-text">
+                                <h4>Learn Foundation Intern</h4>
+                                <p>Information Services Group, (05/2023 - 09/2023)</p>
+                                <p>Contributed to a major course migration project using automation and manual coding, handled accessibility audits, and improved digital skills.</p>
+                            </div>
+                        </div>
+                        <div class="experience-item">
+                            <div class="experience-text">
+                                <h4>Formula Student Member</h4>
+                                <p>Edinburgh University, (10/2022 - 05/2024)</p>
+                                <p>Enhanced vehicle dynamics for a Formula Student car, resolving technical issues and contributing to sustainability advancements.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider between sections -->
+
+
+    <!-- Projects section -->
+    <section id="projects" class="section-content night">
+        <h2>My Projects</h2>
+        <div class="projects">
+            <!-- Individual project entries -->
+            <div class="project">
+                <p>Portfolio Website</p>
+                <a href="https://github.com/MantraayPatil/MantraayPatil.github.io" target="_blank">
+                    <img src="assets/projects/proj1.png" alt="Project 1: Portfolio Website">
+                </a>
+                <p>Responsive portfolio website showcasing projects, experience, and technical skills, built with JS, HTML, and CSS. Focused on clean design, modern aesthetics, and intuitive user experience.</p>
+            </div>
+            <div class="project">
+                <p>AI Image Generator with Community Sharing</p>
+                <a href="https://github.com/MantraayPatil/AI-Image-Generator-with-Community-Sharing" target="_blank">
+                    <img src="assets/projects/proj2.png" alt="Project 2: AI-Image-Generator-with-Community-Sharing">
+                </a>
+                <p>Full-stack web application using the MERN stack to create an image-sharing platform powered by DALL-E. Features include AI-generated images, a Pinterest-like interface, and efficient media management with Cloudinary.</p>
+            </div>
+            <div class="project">
+                <p>Sorting Algorithm Visualizer</p>
+                <a href="https://github.com/MantraayPatil/Algorithm-Visualizer" target="_blank">
+                    <img src="assets/projects/proj3.png" alt="Project 3: Sorting Algorithm Visualizer">
+                </a>
+                <p>Python tool for interactive visualization of sorting algorithms. Users can watch real-time sorting processes like Bubble Sort and Insertion Sort, making it a practical educational tool.</p>
+            </div>
+        </div>
+        <!-- Link to GitHub repository -->
+        <div class="repo-container">
+            <a href="https://github.com/MantraayPatil" target="_blank" class="repo-button">
+                <img src="assets/projects/github.png" alt="GitHub Logo" class="github-logo">
+                <span>My Repo</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Divider between sections -->
+    <!-- div class="section-divider"></div>  -->
+    <!--Have been removed, but may be added later again-->
+
+    <!-- Contact section -->
+    <section id="contact" class="section-content night">
+        <h2>Contact Me</h2>
+        <p class="contact-message">Have a question or wish to collaborate? Please provide your details, and I will respond promptly.</p>
+        
+        <!-- Contact form -->
+        <div class="contact-form">
+            <form action="https://formspree.io/f/xovargev" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+        <!-- LinkedIn contact link -->
+        <div class="contact-link">
+            <p class="contact-message">
+                Alternatively, you can connect with me on LinkedIn.
+            </p>
+            <a href="https://www.linkedin.com/in/mantraay-patil/" target="_blank">
+                <img src="assets/contacts/linkedin.png" alt="LinkedIn" class="linkedin-icon">
+            </a>
+        </div>
+        <!-- Scroll to top button -->
+        <div class="scroll-to-top">
+            <span>&#94;</span>
+        </div>
+        <!-- Bottom box with copyright -->
+        <div class="bottom-box">
+            <p>&#64; 2024 - Mantraay Patil</p>
+        </div>
+    </section>
+    <!-- External scripts -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>

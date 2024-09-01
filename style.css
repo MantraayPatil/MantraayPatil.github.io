@@ -1,5 +1,8 @@
+/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*{
+
+/* General Reset and Font */
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -7,18 +10,10 @@
     font-weight: 400;
     font-style: normal;
 }
-.banner {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 100vh;
-    padding: 100px;
-    background: white;
-    transition: 0.5s;
-}
-header{
-    position: absolute;
+
+/* Header Styles */
+header {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -26,9 +21,9 @@ header{
     padding: 20px 100px;
     justify-content: space-between;
     align-items: center;
-
 }
-header .logo{
+
+header .logo {
     color: rgb(106, 105, 105);
     text-decoration: none;
     font-size: 2em;
@@ -37,46 +32,48 @@ header .logo{
     letter-spacing: 0.05em;
 }
 
-header .logo span{
+header .logo span {
     color: rgb(255, 196, 0);
     font-size: 1.5em;
 }
-header ul{
+
+header ul {
     display: flex;
     gap: 100px;
-    
 }
-header ul li{
-    list-style:none;
-    
 
+header ul li {
+    list-style: none;
 }
-header ul li a{
+
+header ul li a {
     text-decoration: none;
     font-weight: 600;
     font-size: 1.2em;
     color: rgb(106, 105, 105);
 }
-.content{
+
+/* Content Area */
+.content {
     position: relative;
-    max-width: 700px;
+    max-width: 1200px;
+    text-align: center; 
+    margin: 0 auto; 
+    padding-top: 20px; 
 }
-.content h2{
+
+.content h2 {
     font-size: 5.5em;
     color: rgb(106, 105, 105);
     transition: 0.5s;
+    margin-bottom: 20px; 
 }
-.content h2 span{
+
+.content h2 span {
     color: rgb(255, 196, 0);
 }
-.content p{
-    font-size: 1.2em;
-    color: rgb(106, 105, 105);
-    margin: 10px 0;
-    transition: 0.5s;
-}
-.content button{
-    position: relative;
+
+.content button {
     background: orange;
     color: azure;
     border: none;
@@ -84,18 +81,21 @@ header ul li a{
     padding: 15px 35px;
     font-size: 1.25em;
     letter-spacing: 0.05em;
-    margin-right: 20px;
+    margin: 0 10px;
     border-radius: 15px;
     cursor: pointer;
 }
-.content button.chat{
-    background-color: transparent;
-    color: grey;
+
+.content button:hover {
+    background-color: rgb(249, 224, 98); 
+    color: rgb(106, 105, 105);
 }
-.darkMode{
-    position: absolute;
+
+/* Dark Mode Toggle */
+.darkMode {
+    position: fixed;
     bottom: 25px;
-    left: 50%;
+    right: 25px;
     width: 60px;
     height: 60px;
     background-color: lightgray;
@@ -105,25 +105,564 @@ header ul li a{
     align-items: center;
     cursor: pointer;
     font-size: 2em;
+    z-index: 1000;
 }
+
 .darkMode ion-icon:nth-child(2),
-.banner.night .darkMode ion-icon:nth-child(1){
+.banner.night .darkMode ion-icon:nth-child(1) {
     display: none;
 }
-.banner.night .darkMode ion-icon:nth-child(2){
+
+.banner.night .darkMode ion-icon:nth-child(2) {
     display: block;
 }
-.banner.night{
+
+/* Banner Styles */
+.banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 100px;
+    background: rgb(241, 255, 255);
+    transition: 0.5s;
+}
+
+.banner.night {
     background-color: rgb(106, 105, 105);
 }
-.banner.night .darkMode{
-    color: lightgrey;
-    background: grey;
-}
+
 .banner.night header .logo,
 .banner.night .content h2,
 .banner.night .content p,
-.banner.night .content button.chat,
-.banner.night header ul li a{
+.banner.night header ul li a {
     color: white;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Section Content Styles */
+.section-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 100px 20px;
+    background: rgb(241, 255, 255); 
+    transition: background-color 0.5s, color 0.5s; 
+    text-align: center;
+}
+
+#about h2,
+#projects h2,
+#contact h2 {
+    margin: 0;
+    margin-bottom: 50px;
+    font-size: 7em; 
+    color: rgb(255, 196, 0); 
+    font-weight: 500; 
+    transition: color 0.5s; 
+}
+
+/* Section Divider */
+.section-divider {
+    width: 100%;
+    height: 10px;
+    background-color: rgb(255, 196, 0);
+}
+
+/* About Me Section */
+.about-me {
+    display: flex;
+    min-height: 75vh;
+    padding: 10px;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.about-me .left {
+    padding-right: 10%;
+    padding-left: 10%;
+    flex-basis: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.about-me .left img {
+    border-radius: 10%; 
+    width: 80%; 
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 20px;
+    transition: border-color 0.5s; 
+}
+
+.about-me .left p {
+    font-size: 1.5em;
+    color: rgb(106, 105, 105); 
+    margin-top: 20px;
+    transition: color 0.5s; 
+}
+
+/* Slideshow */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.fade {
+    animation: fade 0.2s linear;
+}
+
+@keyframes fade {
+    from { opacity: 0.4 } 
+    to { opacity: 1 }
+}
+
+.section-content.night .about-me {
+    background-color: rgb(106, 105, 105); 
+    color: white; 
+}
+
+
+.section-content.night .about-me .left p {
+    color: white; 
+}
+
+
+.section-content.night .about-me .box {
+    color: white; 
+}
+
+.section-content.night .about-me .box:hover {
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5); 
+}
+
+.about-me .right {
+    flex-basis: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-me .box {
+    padding: 20px;
+    margin: 10px 0;
+    font-size: 1.5em;
+    text-align: center;
+    transition: transform 0.5s, box-shadow 0.5s; 
+}
+
+.about-me .box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.right .box {
+    background: rgb(241, 255, 255); 
+    border-radius: 10px;
+    transition: background-color 0.5s, color 0.5s; 
+}
+
+#education h3 {
+    font-size: 1.5em; 
+    color: rgb(255, 196, 0);
+    margin-bottom: 20px; 
+}
+
+.education-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+}
+
+.education-item {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+
+.education-details {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+
+.education-image-container {
+    background-color: rgb(249, 224, 98); 
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+
+.education-image {
+    width: 100px;
+    height: auto;
+    border-radius: 8px; 
+}
+
+
+.section-content.night .education-content .education-item:first-of-type .education-image {
+    content: url('assets/abouts/UoElogowhite.png'); 
+}
+
+
+.section-content:not(.night) .education-content .education-item:first-of-type .education-image {
+    content: url('assets/abouts/UoElogo.png'); /* Light mode image for the first item */
+}
+
+
+.section-content.night .education-content .education-item:first-of-type .education-image-container {
+    background-color: rgb(106, 105, 105); 
+}
+
+.education-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.education-text h4 {
+    font-size: 1em; 
+    color: rgb(106, 105, 105); 
+    margin-bottom: 5px; 
+}
+
+.education-text p {
+    font-size: 0.8em;
+    color: rgb(106, 105, 105); 
+    text-align: center;
+}
+
+/* Experience Section */
+#experience h3 {
+    font-size: 1.5em; 
+    color: rgb(255, 196, 0); 
+    margin-bottom: 20px; 
+}
+
+.experience-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+}
+
+.experience-item {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+
+.experience-image-container {
+    background-color: rgb(249, 224, 98);
+    padding: 10px; 
+    border-radius: 10px; 
+    display: inline-block; 
+}
+
+.experience-image {
+    width: 100px; 
+    height: auto;
+    border-radius: 8px; 
+}
+
+.experience-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.experience-text h4 {
+    font-size: 1em; 
+    color: rgb(106, 105, 105);
+    margin-bottom: 5px; 
+}
+
+.experience-text p {
+    font-size: 0.8em; 
+    color: rgb(106, 105, 105); 
+}
+
+
+.section-content.night #experience h3,
+.section-content.night .experience-text h4,
+.section-content.night .experience-text p {
+    color: white; 
+}
+
+.section-content.night .experience-content .experience-item .experience-image-container {
+    background-color: rgb(106, 105, 105); 
+}
+
+.section-content.night .right .box {
+    background-color: rgb(106, 105, 105); 
+    color: white; 
+}
+
+.section-content.night #education h3,
+.section-content.night #education .education-text h4,
+.section-content.night #education .education-text p {
+    color: white;
+}
+
+
+/* Projects Section */
+.projects {
+    display: flex;
+    justify-content: space-between; 
+    align-items: stretch; 
+    margin: 0 50px; 
+}
+
+.project {
+    text-align: center;
+    flex-basis: 30%; 
+    margin: 0 10px;
+    align-items: center; 
+    justify-content: space-between; 
+    text-align: center;
+}
+
+.project img {
+    width: 100%;
+    max-width: 300px; 
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 25%; 
+    border: 10px outset rgb(255, 196, 0); 
+    transition: transform 0.5s ease, border-color 0.5s ease; 
+}
+
+.project img:hover {
+    transform: scale(1.17); 
+    border: 10px inset rgb(249, 224, 98); 
+}
+
+/* Night Mode Adjustments for Projects */
+.section-content.night .project img {
+    border-color: rgb(249, 224, 98); 
+}
+
+.section-content.night .projects .project:first-of-type img {
+    content: url('assets/projects/proj1b.png'); 
+}
+
+.project p:first-child {
+    font-weight: 400; 
+    font-size: 2.5em;
+    margin-bottom: 30px; 
+    margin-top: 20px;
+}
+
+.project p:last-child {
+    font-size: 1.5em;   
+    color: #555;        
+    margin-top: 10px; 
+}
+
+.section-content.night {
+    background-color: rgb(106, 105, 105); 
+    color: white;
+}
+
+.section-content.night .project p {
+    color: white;
+}
+
+/* Repository Button */
+.repo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px; 
+}
+
+.repo-button {
+    display: flex;
+    align-items: center;
+    background: lightgrey; 
+    color: rgb(106, 105, 105); 
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.github-logo {
+    width: 40px; 
+    height: auto;
+    margin-right: 10px;
+}
+
+.section-content.night .repo-button {
+    background: rgb(255, 196, 0); 
+    color: rgb(106, 105, 105); 
+}
+
+.section-content.night .repo-container {
+    background: rgb(106, 105, 105); 
+}
+
+/* Contact Section */
+.contact-message {
+    font-size: 1.4em; 
+    color: rgb(106, 105, 105);
+    text-align: center; 
+    margin-bottom: 30px; 
+    font-weight: 400;
+    line-height: 1.6; 
+}
+
+.section-content.night .contact-message {
+    color: white; 
+}
+
+/* Contact Form */
+.contact-form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: transparent; 
+    border-radius: 8px;
+    box-shadow: none; 
+}
+
+.form-group {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #000; 
+}
+
+.form-group input,
+.form-group textarea {
+    font-size: 1em;
+    width: 100%;
+    padding-top: 10px;
+    padding-right: 15px; 
+    padding-bottom: 10px; 
+    padding-left: 15px; 
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #000; 
+    background: transparent; 
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    background-color: rgb(255, 196, 0); 
+    color: #333; 
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: rgb(249, 224, 98); 
+}
+
+
+#contact {
+    position: relative; 
+    padding-bottom: 50px; 
+}
+
+.contact-link {
+    text-align: center; 
+    margin-top: 50px; 
+    margin-bottom: 10px; 
+}
+
+.contact-message {
+    color: rgb(106, 105, 105); 
+    font-size: 1.5em; 
+    margin-bottom: 10px; 
+}
+
+.linkedin-icon {
+    display: block; 
+    width: 10%;
+    min-width: 150px;
+    height: auto;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    margin: 0 auto;
+}
+
+.linkedin-icon:hover {
+    transform: scale(1.1);
+    border-color: rgb(106, 105, 105);
+    box-shadow: 0 0 10px lightgrey;
+}
+
+
+.scroll-to-top {
+    width: 50px;
+    height: 50px; 
+    background-color: rgb(255, 196, 0); 
+    color: rgb(106, 105, 105); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; 
+    cursor: pointer;
+    margin: 0 auto;
+    position: relative;
+    top: 60px; 
+    z-index: 1000;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.scroll-to-top:hover {
+    background-color: rgb(249, 224, 98); 
+    transform: scale(1.1);
+}
+
+.scroll-to-top span {
+    font-size: 1.5em; 
+}
+
+
+.bottom-box {
+    position: absolute; 
+    bottom: 0;
+    left: 0;
+    width: 100%; 
+    padding: 20px 0; 
+    background-color: #484848; 
+    color: white; 
+    text-align: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.section-content:not(.night) .bottom-box {
+    background-color: rgb(249, 224, 98);
+    color: rgb(106, 105, 105); 
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
