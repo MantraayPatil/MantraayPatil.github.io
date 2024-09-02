@@ -27,8 +27,8 @@ header {
 }
 
 .banner.night header {
-    background-color: rgb(106, 105, 105); /* Night mode background color */
-    z-index: 1000; /* Ensure it's in front of everything */
+    background-color: rgb(106, 105, 105);
+    z-index: 1000;
     transition: background-color 0.5s ease; 
 }
 
